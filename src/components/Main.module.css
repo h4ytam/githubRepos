@@ -1,0 +1,35 @@
+.headline {
+  color: #24292e;
+}
+.usernameInput:focus {
+  border-color: rgb(3 102 214);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+.usernameInput {
+  display: flex;
+  padding: 9px;
+  border: solid 1px #a5a2a2;
+  outline: 0;
+  font: normal 13px/100% Verdana, Tahoma, sans-serif;
+  width: 300px;
+  background: #ffffff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.btnSearch {
+  display: flex;
+  position: absolute;
+  top: 14%;
+  left: 27%;
+  height: 32px;
+  width: 106px;
+  background-color: #b7b7b7;
+  padding: 8px 0px 0px 30px;
+  border: 0;
+  color: #ffff;
+  text-align: center;
+  border-radius: 10px;
+}

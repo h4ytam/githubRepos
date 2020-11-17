@@ -1,0 +1,23 @@
+.avatar {
+  display: flex;
+  border-radius: 138px;
+  width: 150px;
+  margin-top: 10px;
+  height: 150px;
+}
+.name,
+.followers,
+.bio {
+  display: flex;
+  color: #24292e;
+}
+.followers {
+  font-size: 14px;
+}
+.bio {
+  font-size: 16px;
+}
+.error {
+  color: #ffc199;
+  font-size: 14px;
+}
