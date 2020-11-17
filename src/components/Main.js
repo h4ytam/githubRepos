@@ -13,20 +13,6 @@ const Main = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    // const data = await axios
-    // .get(`https://api.github.com/users/${username}`)
-    // .then((response) => {
-    //   setGithubUser(response.data);
-
-    //   // console.log(response.data.repos_url);
-    // })
-    // // .then((data) => {
-    // //   console.log(data.repos_url);
-    // // })
-    // .catch((error) => {
-    //   setApiError(error.response.data.message);
-    // });
-
     const repos = await axios
       .all([
         axios.get(`https://api.github.com/users/${username}`),
@@ -38,12 +24,8 @@ const Main = () => {
             data: { login, bio, avatar_url, followers },
           } = data1;
           setGithubUser({ login, bio, avatar_url, followers });
-          // console.log({ login, bio, avatar_url, followers });
           const reposDataResponse = data2.data;
-          // // output of req.
           setReposData(reposDataResponse);
-          // console.log(reposData);
-          // console.log("data user", data1, "data repos", data2.data);
         })
       );
   };

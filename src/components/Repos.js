@@ -8,7 +8,8 @@ const Repos = ({ reposData }) => {
   if (!reposData || !reposData.length) {
     return <p>no result</p>;
   }
-  const filterNames = ({ name }) => {
+  const filterRepos = ({ name }) => {
+    console.log(name);
     return name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
   };
   const onchangeHandler = async (e) => {
@@ -20,18 +21,18 @@ const Repos = ({ reposData }) => {
       <input
         placeholder="Find a repository..."
         type="text"
-        onSearch={setSearchValue}
+        // onSearch={setSearchValue}
         value={searchValue}
         onChange={onchangeHandler}
         className={styles.repoSearch}
       />
-      {!reposData.filter(filterNames).length && (
+      {!reposData.filter(filterRepos).length && (
         <p className={styles.repoOwner}>
           {reposData[0].owner.login} doesn’t have any repositories that match
         </p>
       )}
 
-      {reposData.filter(filterNames).map((repo) => {
+      {reposData.filter(filterRepos).map((repo) => {
         return (
           <div className={styles.singleRepo}>
             <p key={repo.id}>
