@@ -2,15 +2,16 @@
 
 By using this app you can search,display and filter users and their repositories using official GitHub API.
 
-## Tools
+## Tools:
 
 tools used in this App:
 - React
 - Github Api
 - Axios
 
-### `yarn start`
+### To get Started:
 
+`yarn start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
