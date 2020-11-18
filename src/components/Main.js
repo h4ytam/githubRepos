@@ -27,7 +27,10 @@ const Main = () => {
           const reposDataResponse = data2.data;
           setReposData(reposDataResponse);
         })
-      );
+      )
+      .catch((error) => {
+        setApiError(error.response.statusText);
+      });
   };
   const onchangeHandler = async (e) => {
     setUsername(e.target.value);
@@ -51,7 +54,7 @@ const Main = () => {
           Search
         </button>
         <Profile githubUser={githubUser} apiError={apiError} />
-        <Repos reposData={reposData} />
+        <Repos reposData={reposData} apiError={apiError} />
       </Container>
     </div>
   );

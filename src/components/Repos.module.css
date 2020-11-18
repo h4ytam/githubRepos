@@ -18,6 +18,12 @@
 }
 .repoLang {
 }
+.error {
+  color: #d83030;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .repoOwner {
   font-size: 20px;
   color: rgb(36 41 46);
@@ -28,11 +34,6 @@
   align-items: center;
   justify-content: center;
   margin: -38px 0 0 -17px;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -37px; */
 }
 .repoSearch:focus {
   border-color: rgb(3 102 214);

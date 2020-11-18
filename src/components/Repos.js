@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import styles from "./Repos.module.css";
 import dateFormat from "dateformat";
 
-const Repos = ({ reposData }) => {
+const Repos = ({ reposData, apiError }) => {
+  console.log(apiError);
   const [searchValue, setSearchValue] = useState("");
 
   if (!reposData || !reposData.length) {
-    return <p>no result</p>;
+    return <p className={styles.error}>{apiError}</p>;
   }
   const filterRepos = ({ name }) => {
-    console.log(name);
+    // console.log(name);
     return name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
   };
   const onchangeHandler = async (e) => {

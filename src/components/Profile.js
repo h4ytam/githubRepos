@@ -6,6 +6,7 @@ const Profile = ({
   githubUser: { login, followers, avatar_url, bio },
   apiError,
 }) => {
+  // console.log(apiError);
   return (
     <div>
       {login ? (
