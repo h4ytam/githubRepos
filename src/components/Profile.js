@@ -2,11 +2,14 @@ import React from "react";
 import { Container } from "@material-ui/core";
 import styles from "./Profile.module.css";
 
+/**
+ * Props
+ * @param {login,followers,avart_url,bio} arg are the desctructed props coming from the Api reponse
+ */
 const Profile = ({
   githubUser: { login, followers, avatar_url, bio },
   apiError,
 }) => {
-  // console.log(apiError);
   return (
     <div>
       {login ? (

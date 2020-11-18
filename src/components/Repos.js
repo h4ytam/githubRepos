@@ -3,12 +3,19 @@ import styles from "./Repos.module.css";
 import dateFormat from "dateformat";
 
 const Repos = ({ reposData, apiError }) => {
-  console.log(apiError);
   const [searchValue, setSearchValue] = useState("");
 
+  /*
+   * checking if the data is available or not
+   */
   if (!reposData || !reposData.length) {
     return <p className={styles.error}>{apiError}</p>;
   }
+
+  /**
+   * the filter function
+   * @param {name} arg A name to filter from the list.
+   */
   const filterRepos = ({ name }) => {
     // console.log(name);
     return name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;

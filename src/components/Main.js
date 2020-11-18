@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Profile from "./Profile";
-import { Container, Button } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import styles from "./Main.module.css";
 import Repos from "./Repos";
 
@@ -11,6 +11,9 @@ const Main = () => {
   const [apiError, setApiError] = useState("");
   const [reposData, setReposData] = useState({});
 
+  /**
+   * the submit function with the api axios calls for the all data necessary to work with the project
+   */
   const submitHandler = async (e) => {
     e.preventDefault();
     const repos = await axios
